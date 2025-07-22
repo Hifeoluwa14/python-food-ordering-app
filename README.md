@@ -42,4 +42,5 @@ A *simple command-line food ordering application* designed for small businesses,
 ## Code  
 
 The project is implemented in a Jupyter Notebook:  
+<a>food ordering app</a>
 [food ordering app.ipynb](food-ordering-app.ipynb)  
