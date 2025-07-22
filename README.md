@@ -1,23 +1,45 @@
-# python-food-ordering-app
+# Python Food Ordering App  
 
-### This is a python project to build a food ordering app for a small business.
+A *simple command-line food ordering application* designed for small businesses, built with Python. This project demonstrates core functionalities like menu display, order processing, cart management, and payment simulation.
 
-Here are the functions I created took to achieve the goal
+## Features  
 
-* display_menu: This function create list options of products, prices, check-out and cancel order.
-* from IPython.display import clear_output
-* user_choice: This function uses a while loop to accept user's input and only stops loop until a correct input has been inputted.
-* get_quantity: This function uses a while loop to accept user's input for quantity of item the user would purchase
-* get_item_name: This function uses the output from the user_choice to determine the item being purchased.
-* get_item_price: This function uses the output from the user_choice function to determine the price of item being purchased
-* calculate_total_price: This does the simple job of using the output from item price and quantity to determine the price of the purchase for that particular item.
-* place_order: This function uses the output from display_menu, get_item_name, quantity and calculate_total_price to process the order by adding it to cart. It uses a while loop to keeping asking for order until user decides to check out.
-* payment: This function display total cost of order and ask if a user would like to make payment or not
-* payment_check: This communicate with payment partner like paypal to know if the payment was successful or not.
-* payment_retry: This ask customer if they will like to retry making payment or not if the payment was unsuccessful
-* check_out: This function runs other functions to determine if order was successful after payment was made or customer di=ecided to cancel. It display receipts from purchase if payment was successful. However in this case we set payment as successful to permit our code to run without error
-* food_ordering_app: This function runs the processing using the check out and place_order function
-* check_out_declined: This is an alternate function that say payment was unsuccessful.
-* food_ordering_declined: In this case we wanted to understand the run of event when payment was unsuccessful.
+- *Interactive Menu Display*: Browse available food items with prices.  
+- *Order Management*: Add items to cart, specify quantities, and calculate totals.  
+- *Payment Simulation*: Integrates with mock payment processing (e.g., PayPal) and handles success/failure scenarios.  
+- *Receipt Generation*: Prints order summaries upon successful payment.  
 
-The code file is attached to this repository in a form of jupyter notebook.
+### Key Functions  
+
+| Function | Description |  
+|----------|-------------|  
+| display_menu() | Shows the menu, prices, and options (checkout/cancel). |  
+| user_choice() | Validates user input for menu selections. |  
+| get_quantity() | Prompts for item quantity and validates input. |  
+| get_item_name() | Maps user selection to the item name. |  
+| get_item_price() | Retrieves the price of the selected item. |  
+| calculate_total_price() | Computes the subtotal for an item (price × quantity). |  
+| place_order() | Manages the order loop, adds items to cart, and processes checkout. |  
+| payment() | Displays the total cost and initiates payment. |  
+| payment_check() | Simulates payment verification (success/failure). |  
+| payment_retry() | Handles retries for failed payments. |  
+| check_out() | Generates a receipt or cancels the order based on payment status. |  
+| food_ordering_app() | Main function to run the app workflow. |  
+
+## Usage  
+
+1. *Run the Jupyter Notebook*:  
+   bash  
+   jupyter notebook python-food-ordering-app.ipynb  
+     
+2. Follow the prompts to select items, quantities, and proceed to checkout.  
+
+## Scenarios Covered  
+
+- ✅ *Successful Payment*: Order confirmed, receipt generated.  
+- ❌ *Declined Payment*: Option to retry or cancel.  
+
+## Code  
+
+The project is implemented in a Jupyter Notebook:  
+[food-ordering-app.ipynb](food-ordering-app.ipynb)  
